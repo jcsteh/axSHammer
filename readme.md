@@ -65,5 +65,5 @@ If your screen reader reports "application" while you're navigating and you thin
 ### No idea, do all the things
 If you just don't know which tool to use, you can try this, which just runs all of the above, consequences be damned.
 For example, when shopping on [Robins Kitchen](https://www.robinskitchen.com.au/), I couldn't find the checkout button.
-I assumed it was an inaccessible icon, so I tried "Expose completely inaccessible elements" and was sad when I still couldn' tcheck out.
+I assumed it was an inaccessible icon, so I tried "Expose completely inaccessible elements" and was sad when I still couldn't check out.
 Upon investigation, I subsequently discovered that the checkout button had been aria-hidden, but I didn't even think to try that tool... because who would explicitly hide a checkout button, right?
