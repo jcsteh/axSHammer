@@ -1,16 +1,14 @@
 {
-  "manifest_version": 2,
-  "name": "AxSHammer",
-  "version": "2020.1",
-  "description": "Hammer an inaccessible website into shape",
-  "author": "James Teh",
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "axSHammer@jantrid.net"
-    }
+  "name": "Hammertools",
+  "version": "1.0",
+    "permissions": ["contextMenus","tabs", "http://*/*", "https://*/*"],
+      "icons": {
+    "16": "menu.png"
   },
-  "background": {
+  "description": "Access Hammer for Chrome, originally made by James Teh",
+       "background": {
+    "persistent": false,
     "scripts": ["background.js"]
-  },
-  "permissions": ["menus", "activeTab"]
+},
+  "manifest_version": 2
 }

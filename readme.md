@@ -1,4 +1,16 @@
-# AxSHammer
+# Hammertools (AxSHammer for Chromium browsers)
+
+
+To install this extension, for now:
+
+1. Clone repo
+ 2. go to your Chrome addressbar, type in about:extensions
+ 3. Load unpacked extensions, choose this folder.
+ 4. Press shift 10 or applications key anywhere on a website, it should work, either hit the h key to look for Hammertools menu or use the arrows.
+ 5. Choose whichever option you want to do.
+ 
+Original Readme follows.
+ 
 Sometimes, when something's broken, you have to hammer it into shape.
 
 - Author: James Teh &lt;jamie@jantrid.net&gt;
@@ -15,7 +27,7 @@ For example, [AxSGrease](https://github.com/jcsteh/axSGrease) provides Greasemon
 But sometimes, you don't have the ability, time, money, patience or energy for either of these.
 You just want some kind of access and you're willing to deal with a bit (or a lot) of ugliness to get it.
 
-AxSHammer is a Mozilla Firefox add-on which provides a set of tools to try to help in this situation.
+AxSHammer is a Mozilla Firefox (Now Chromium) add-on which provides a set of tools to try to help in this situation.
 They might not work.
 They might break things further.
 Even if they do work, the access they provide is probably going to be ugly and suboptimal.
