@@ -9,7 +9,7 @@
 chrome.runtime.onInstalled.addListener(function () {
   const topMenu = chrome.contextMenus.create({
     contexts: ["all"],
-    title: "&Hammertools Menu",
+    title: "&AxSHammer Menu",
     "id": "topMenu",
   });
   chrome.contextMenus.create({
