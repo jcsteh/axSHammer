@@ -1,0 +1,21 @@
+{
+  "name": "Hammertools",
+  "version": "1.0",
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "icons": {
+    "16": "menu.png"
+  },
+  "description": "Access Hammer for Chrome",
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "manifest_version": 2
+}
