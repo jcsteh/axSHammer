@@ -2,7 +2,7 @@
  * AxSHammer
  * Background script
  *Author: James Teh <jamie@jantrid.net>
- * Copyright 2020 James Teh
+ * Copyright 2020-2024 James Teh
  * License: GNU General Public License version 2.0
  */
 
@@ -29,6 +29,16 @@ browser.menus.create({
   parentId: topMenu,
   title: "Kill all ARIA &applications",
   onclick: killAllAriaApplication,
+});
+browser.menus.create({
+  parentId: topMenu,
+  title: "Kill all aria-la&bel",
+  onclick: killAllAriaLabel,
+});
+browser.menus.create({
+  parentId: topMenu,
+  title: "Kill all ARIA &roles",
+  onclick: killAllAriaRole,
 });
 browser.menus.create({
   parentId: topMenu,
@@ -92,9 +102,33 @@ function killAllAriaApplication(info, tab) {
   });
 }
 
+function killAllAriaLabel(info, tab) {
+  browser.tabs.executeScript(tab.id, {
+    allFrames: true,
+    code: `
+      for (let el of document.querySelectorAll("[aria-label]")) {
+        el.removeAttribute("aria-label");
+      }
+    `,
+  });
+}
+
+function killAllAriaRole(info, tab) {
+  browser.tabs.executeScript(tab.id, {
+    allFrames: true,
+    code: `
+      for (let el of document.querySelectorAll("[role]")) {
+        el.removeAttribute("role");
+      }
+    `,
+  });
+}
+
 function runAll(info, tab) {
   exposeCompletelyInaccessibleElements(info, tab);
   killAllAriaHidden(info, tab);
   killAllAriaLive(info, tab);
   killAllAriaApplication(info, tab);
+  killAllAriaLabel(info, tab);
+  killAllAriaRole(info, tab);
 }

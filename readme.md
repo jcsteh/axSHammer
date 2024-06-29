@@ -2,7 +2,7 @@
 Sometimes, when something's broken, you have to hammer it into shape.
 
 - Author: James Teh &lt;jamie@jantrid.net&gt;
-- Copyright: 2020 James Teh
+- Copyright: 2020-2024 James Teh
 - License: GNU General Public License version 2.0
 
 In an ideal world, websites would all be accessible.
@@ -61,6 +61,21 @@ This is almost always misused.
 
 This tool removes the application role from all elements.
 If your screen reader reports "application" while you're navigating and you think you're missing useful content, this tool might help.
+
+### Kill all aria-label
+aria-label allows authors to specify a label for accessibility purposes.
+On elements such as links and buttons, this overrides the text content of the element.
+This is sometimes misused by authors to provide secondary information such as "(opens in a new tab)" or "Go to (some web address)".
+This might result in overly long labels in some cases, but worse, it could result in the primary information being completely lost.
+
+This tool removes aria-label from everything.
+If you encounter a site with many links that are missing text you would expect, this tool might help.
+
+### Kill all ARIA roles
+ARIA roles allow authors to specify the type of a custom element.
+For example, an author might use this if they implement a custom check box, menu, etc.
+Unfortunately, when ARIA roles are misused, they can make sites difficult or even impossible to use with assistive technology.
+This tool removes all ARIA roles.
 
 ### No idea, do all the things
 If you just don't know which tool to use, you can try this, which just runs all of the above, consequences be damned.

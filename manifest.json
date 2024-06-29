@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "AxSHammer",
-  "version": "2020.1",
+  "version": "2024.1",
   "description": "Hammer an inaccessible website into shape",
   "author": "James Teh",
   "browser_specific_settings": {
